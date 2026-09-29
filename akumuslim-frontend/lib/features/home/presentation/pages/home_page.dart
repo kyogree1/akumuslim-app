@@ -4,6 +4,7 @@ import '../widgets/last_read_card.dart';
 import '../widgets/feature_grid.dart';
 import '../widgets/list_surah.dart';
 import '../widgets/quote.dart';
+import '../widgets/bottom_nav.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -72,25 +73,11 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        selectedItemColor: const Color(0xFF2E6F40),
-        unselectedItemColor: Colors.grey,
+      bottomNavigationBar: CustomBottomNav(
         currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
-            label: 'Beranda',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book_rounded),
-            label: 'Qur\'an',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_border_rounded),
-            label: 'Bookmark',
-          ),
-        ],
+        onTap: (index) {
+          // Aramidon ti navigasion no ma-click ti button
+        },
       ),
     );
   }
